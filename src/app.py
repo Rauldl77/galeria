@@ -3,21 +3,20 @@
 # Nota: en ese tutorial se ve como hacerlo
 #  - con Heroku CLI
 #  - sin usar GitHub
-#   Aunque luego al final lo manda a GitHub  
+#   Aunque luego al final lo manda a GitHub
 
 from flask import Flask, render_template
 from datetime import datetime
 import locale
 
 
-app = Flask(__name__) 
+app = Flask(__name__)
 locale.setlocale(locale.LC_TIME, '')
 
 
 @app.route('/')
 def homepage():
-    
-    noseusa = 23
+    # noseusa = 23
     the_time = datetime.now().strftime("%A, %d %b %Y %H:%M")
 
     # Render HTML with variable
